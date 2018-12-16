@@ -1,0 +1,22 @@
+---
+  - hosts: all
+    become: yes
+    tasks:
+    - name: install git,tree and wget on ubuntu
+      apt:
+         name: "{{item}}"
+         state: present
+      with_items:
+         - git
+         - tree
+         - wget
+      when: ansible_os_family =="Debain"
+
+
+
+
+
+
+
+
+

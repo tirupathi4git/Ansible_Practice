@@ -5,6 +5,7 @@
    - name: install git on all nodes
      apt:
       name: git
-      status: present
+      state: present
       
 
+  
